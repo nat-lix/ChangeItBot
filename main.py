@@ -7,7 +7,7 @@ bot = telebot.TeleBot(TOKEN)
 @bot.message_handler(commands=['start', 'help'])
 def handle_start_help(message: telebot.types.Message):
     text = 'Change It бот приветствует Вас! \n Для конвертации введите через пробел: \n ' \
-           '=валюта= =в какую перевести= =количество= \n Список доступных валют /values'
+           'валюта   в какую перевести   количество \n Список доступных валют /values'
     bot.send_message(message.chat.id, text)
 
 @bot.message_handler(commands=['values'])
